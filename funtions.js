@@ -1,4 +1,6 @@
-$('#but').on('click', function(e) {
+$(document).ready(function(){
+
+   $('#but').on('click', function(e) {
     e.preventDefault();
     $.ajax( {
       url: 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=',
@@ -17,3 +19,5 @@ $('#but').on('click', function(e) {
       cache: false
     });
   });
+
+});
