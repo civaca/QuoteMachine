@@ -1,17 +1,14 @@
 <!DOCTYPE html>
+
 <html>
   <head>
-  
+    <link href="https://fonts.googleapis.com/css?family=Saira+Condensed" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
     <!-- Latest compiled and minified CSS -->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
-    <script src="funtions.js"></script>
+      <script src="funtions.js"></script>
             
       <link rel="stylesheet" href="theme.css">
       
@@ -19,21 +16,35 @@
   </head>
   <body>
       
+    <h1 class="text-center alert-info well" style="margin-top:0px"  id="main">Random Quote Generator</h1>
     <div class= "container-fluid">
-      <div id="quote" class="col-xs-12 col-md-12 jumbotron text-center" >
-        <h5 id="title">The quote was here</h5>
-        <p id="text"> - the name of the person</p>
+      
+      <div class="row">
+        <div class="col-xs-1 col-md-3">
+        </div>
+      <div id="quote" style="background-color: #0080FF" class="col-xs-10 col-md-6 jumbotron text-center" >
+        <p id="text"> Quote</p>
+        <h4 id="title" class="text-right ">Author</h4>
         <p id="demo"></p>
-        <button id="but" >
-          New Quote
+        <button id="but" class="btn btn-primary-reverse" ><a>
+          New Quote</a>
         </button>
-          <button id='twitter'><a id="lin"> Twitter</a></button>
+          <button id='twitter' class="btn btn-primary-reverse"><a id="lin"><i class="fa fa-twitter"></i> Twitter</a></button>
+        </div>
            
         </div>
     </div>
+    
       
-  
+        
+    <footer>
+    <div id="foot" class="panel-footer text-center text-primary col-xs-12 " >
+        <p id="name">Made by Cristian Vaca.</p>
+        </div>
+       </footer>
   </body>
     
 </html>
+
+
 

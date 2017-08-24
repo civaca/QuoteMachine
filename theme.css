@@ -1,10 +1,32 @@
+p{
+  font-size:30px !important ;
+}
+#name{
+  font-size:20px !important ;
+}
+h4{
+  font-size:25px !important ;
+}
+#foot{
+  background-color:#E0E0E0 !important;
+  
+  
+}
+
 body{
-  font-size:5ex ;
-   background-color:#FF8000;
+  font-size:25px !important ;
+   background-color:#E0E0E0 !important;
+   font-family:Saira Condensed !important;
+}
   
 }
 
 #quote{
-  margin:2em 2em 2em 0em !important;
-  background-color:#0080FF;
+  margin:6em 2em 90px 0em !important;
+  
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none !important;
 }

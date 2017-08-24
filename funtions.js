@@ -9,15 +9,24 @@ var newAjax;
            newAjax = JSON.parse(this.responseText);
            
            document.getElementById("title").innerHTML = newAjax[0].title; 
-        document.getElementById("text").innerHTML = newAjax[0].content;}
+        document.getElementById("text").innerHTML = newAjax[0].content;
+      }
                     }; 
          });  
-document.getElementById("twitter").addEventListener("click", function(d){
-    var toTwit = 'http://twitter.com/home?status='+ encodeURIComponent(newAjax[0].content);
-   document.getElementById("lin").href = toTwit;
-    document.getElementById("lin").target = "_blank";
+    document.getElementById("twitter").addEventListener("click", function(d){
+      var newletters = newAjax[0].content;
+
+
+     newletters = newletters.replace(/(\d+)(?=;)/g, function (x){
+        return String.fromCharCode(x) }).replace(/[&#;]/g, "").replace(/<p>/g,"").replace("</p>", "").replace(/<em>/g,"").replace("</em>", "").replace(/\n/,"");
+
+     var toTwit = 'http://twitter.com/home?status='+ encodeURIComponent('"')+ encodeURIComponent(newletters)+encodeURIComponent('" ') + encodeURIComponent(newAjax[0].title) + encodeURIComponent(" #quotes");
+    if (newletters.length+newAjax[0].title.length<140){document.getElementById("lin").href = toTwit;
+     document.getElementById("lin").target = "_blank";} else {window.alert("Remember twitter has a maximun of 140 charactares");
+                                                             document.getElementById("lin").href = toTwit;
+     document.getElementById("lin").target = "_blank";};
     
-console.log(toTwit);
+
 });
                                              
      });
